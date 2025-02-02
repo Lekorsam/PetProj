@@ -1,8 +1,13 @@
-button {
+.button {
     background: blanchedalmond;
     padding: 20px;
 
     &:hover {
         background: bisque;
     }
+}
+
+.header {
+    padding: 12px;
+    background: aliceblue;
 }
