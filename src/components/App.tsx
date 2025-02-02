@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import './App.scss';
+import * as styles from './App.module.scss';
 export const App = () => {
     const [count, setCount] = useState<number>(0);
 
@@ -9,8 +9,8 @@ export const App = () => {
 
     return (
         <>
-            <div>Hello world!</div>
-            <button  onClick={handleCounterclick}>Click me button</button>
+            <h3 className={styles.header}>Hello world!</h3>
+            <button className={styles.button} onClick={handleCounterclick}>Click me button</button>
             <div>You pressed: {count} time(s)</div>
         </>
     )

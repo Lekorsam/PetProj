@@ -3,7 +3,7 @@ import {BuildWebpackOptions} from "./propsTypes/propsTypes";
 
 export function buildDevserver (options: BuildWebpackOptions): DevServerConfiguration  {
     return {
-        port: options.port ?? 5000,
+        port: options.port ?? 3000,
         open: true
     }
 }

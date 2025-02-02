@@ -9,6 +9,6 @@ export function buildPlugins({mode, paths}: BuildWebpackOptions): Configuration[
     return [
         new HtmlWebpackPlugin({template: paths.html}),
         isProd && new webpack.ProgressPlugin(),
-        isProd && new MiniCssExtractPlugin({filename: 'css/[name].[contenthash].css', chunkFilename: 'css/[name].[contenthash].css'})
+        isProd && new MiniCssExtractPlugin({filename: 'css/[name].[contenthash].css', chunkFilename: 'css/[name].[contenthash].css'}),
     ].filter(Boolean)
 }
