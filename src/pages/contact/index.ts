@@ -1,0 +1,1 @@
+export {ContactLazy as Contact} from './Contact.lazy';
