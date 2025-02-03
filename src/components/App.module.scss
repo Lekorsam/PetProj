@@ -11,3 +11,11 @@
     padding: 12px;
     background: aliceblue;
 }
+
+.link {
+    padding: 12px;
+    &:hover {
+        color: blue;
+        background: aliceblue;
+    }
+}

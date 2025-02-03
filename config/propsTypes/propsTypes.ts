@@ -10,5 +10,6 @@ export interface BuildWebpackOptions {
     port: number;
     paths: BuildPaths;
     mode: Environment;
+    analyzer?: Boolean;
 }
 
