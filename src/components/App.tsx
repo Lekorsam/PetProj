@@ -19,7 +19,7 @@ export const App = () => {
             <img src={icon3} height={50} alt={'Lion!'}/>
             <Cloud color={'blue'} width={50} height={50}/>
             <h2>platform = {__PLATFORM__}</h2>
-            <div>
+            <div data-testId="Main-menu" >
                 <Link className={styles.link} to={'/about'}>About</Link>
                 <Link className={styles.link} to={'/contact'}>Contacts</Link>
             </div>
