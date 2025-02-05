@@ -2,6 +2,7 @@ import webpack, {Configuration} from "webpack";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import {BuildWebpackOptions} from "./propsTypes/propsTypes";
+import ForkTsCheckerWebpackPlugin from "fork-ts-checker-webpack-plugin";
 
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
@@ -15,6 +16,7 @@ export function buildPlugins({mode, paths, analyzer, platform}: BuildWebpackOpti
         analyzer && new BundleAnalyzerPlugin(),
         new webpack.DefinePlugin({
             __PLATFORM__: JSON.stringify(platform),
-        })
+        }),
+        new ForkTsCheckerWebpackPlugin()
     ].filter(Boolean)
 }
