@@ -47,7 +47,7 @@ export function buildLoaders(options: BuildWebpackOptions): ModuleOptions['rules
         use: ['@svgr/webpack'],
     }
 
-    const babelLoader = buildBabelLoader(options);
+    const babelLoader = buildBabelLoader();
 
     return [
         cssLoader,

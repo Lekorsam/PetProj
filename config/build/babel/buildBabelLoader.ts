@@ -2,7 +2,7 @@ import { RuleSetRule } from "webpack";
 import {BuildWebpackOptions} from "../../propsTypes/propsTypes";
 import {removeDataTestIdPlugin} from "./removeDataTestIdPlugin";
 
-export function buildBabelLoader  (options: BuildWebpackOptions) : (undefined | null | false | "" | 0 | RuleSetRule | "...") {
+export function buildBabelLoader  () : (undefined | null | false | "" | 0 | RuleSetRule | "...") {
     return {
         test: /\.tsx?$/,
         exclude: /node_modules/,
