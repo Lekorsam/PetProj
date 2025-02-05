@@ -2,6 +2,7 @@ import { ModuleOptions } from "webpack";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import {BuildWebpackOptions} from "./propsTypes/propsTypes";
 import ReactRefreshTypeScript from 'react-refresh-typescript';
+import {buildBabelLoader} from "./build/babel/buildBabelLoader";
 
 export function buildLoaders(options: BuildWebpackOptions): ModuleOptions['rules'] {
     const isDev = options.mode === 'development';
@@ -46,10 +47,13 @@ export function buildLoaders(options: BuildWebpackOptions): ModuleOptions['rules
         use: ['@svgr/webpack'],
     }
 
+    const babelLoader = buildBabelLoader();
+
     return [
         cssLoader,
-        tsLoader,
+        //tsLoader,
         assetsLoader,
-        svgLoader
+        svgLoader,
+        babelLoader
     ]
 }
