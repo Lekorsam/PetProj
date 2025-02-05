@@ -7,10 +7,13 @@ export interface BuildPaths {
 
 export type Environment = 'production' | 'development';
 
+export type BuildPlatform = 'desktop' | 'mobile';
+
 export interface BuildWebpackOptions {
     port: number;
     paths: BuildPaths;
     mode: Environment;
     analyzer?: Boolean;
+    platform: BuildPlatform;
 }
 

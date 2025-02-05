@@ -6,7 +6,9 @@
   "scripts": {
     "build:dev": "webpack --env mode=development",
     "build:prod": "webpack --env mode=production",
-    "start": "webpack serve --env mode=development"
+    "start": "webpack serve --env mode=development",
+    "build:mobile": "webpack --env platform=mobile",
+    "build:desktop": "webpack --env platform=desktop"
   },
   "keywords": [],
   "author": "",
