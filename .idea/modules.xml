@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/PetProj.iml" filepath="$PROJECT_DIR$/.idea/PetProj.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/WebpackSetup.iml" filepath="$PROJECT_DIR$/.idea/WebpackSetup.iml" />
     </modules>
   </component>
 </project>
