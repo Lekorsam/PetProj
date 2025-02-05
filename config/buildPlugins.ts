@@ -3,11 +3,13 @@ import HtmlWebpackPlugin from "html-webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import {BuildWebpackOptions} from "./propsTypes/propsTypes";
 import ForkTsCheckerWebpackPlugin from "fork-ts-checker-webpack-plugin";
+const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 export function buildPlugins({mode, paths, analyzer, platform}: BuildWebpackOptions): Configuration['plugins'] {
     const isProd = mode === 'production';
+    const isDev = mode === 'development';
 
     return [
         new HtmlWebpackPlugin({template: paths.html}),
@@ -17,6 +19,7 @@ export function buildPlugins({mode, paths, analyzer, platform}: BuildWebpackOpti
         new webpack.DefinePlugin({
             __PLATFORM__: JSON.stringify(platform),
         }),
-        new ForkTsCheckerWebpackPlugin()
+        new ForkTsCheckerWebpackPlugin(),
+        isDev && new ReactRefreshWebpackPlugin()
     ].filter(Boolean)
 }
